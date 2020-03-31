@@ -1,4 +1,4 @@
- package be.intecbrussel.application;
+package be.intecbrussel.application;
 
 import be.intecbrussel.eatbles.Cone;
 import be.intecbrussel.eatbles.Eatable;
@@ -8,15 +8,13 @@ import be.intecbrussel.seller.IceCreamSalon;
 import be.intecbrussel.seller.IceCreamSeller;
 import be.intecbrussel.seller.PriceList;
 
-public class IceCreamSalonTestApp {
- 
-
 public class forme {
     public static void main (String [] args){
 
         PriceList priceList = new PriceList(2.30,4.0,5.0);
 
         IceCreamSalon iceCreamSeler = new IceCreamSalon();
+
         orderMethod(iceCreamSeler);
 
 
@@ -27,7 +25,7 @@ public class forme {
 
         PriceList priceList = new PriceList(4.10,6.90,1.50);
         Stock stock = new Stock(40, 58, 70, 18);
-        IceCreamSeller seller = new IceCreamCar(priceList,stock);
+        IceCreamSeller seller = new IceCreamCar(priceList ,stock);
         OrderCone(seller);
         OrderIceRocket(seller);
         OrderMagnum(seller);
@@ -53,5 +51,7 @@ public class forme {
         Eatable cone = seller.orderCone(new Cone.Flavor[]{Cone.Flavor.MOKKA});
         System.out.println(cone);
     }
+
+
 }
 
